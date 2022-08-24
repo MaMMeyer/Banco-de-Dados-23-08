@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="System"?>
+<database>
+    <name>banco</name>
+    <table>
+        <database></database>
+        <name>motorista</name>
+        <ddl>CREATE TABLE motorista (id_motorista INTEGER PRIMARY KEY AUTOINCREMENT, cpf INTEGER (11) UNIQUE NOT NULL, nome STRING (50), idade INTEGER (3), usa_oculos BOOLEAN (1))</ddl>
+        <columns>
+            <column>
+                <name>id_motorista</name>
+                <type>INTEGER</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY AUTOINCREMENT</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>cpf</name>
+                <type>INTEGER</type>
+                <constraints>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>nome</name>
+                <type>STRING</type>
+            </column>
+            <column>
+                <name>idade</name>
+                <type>INTEGER</type>
+            </column>
+            <column>
+                <name>usa_oculos</name>
+                <type>BOOLEAN</type>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">1</value>
+                <value column="1">12345678911</value>
+                <value column="2">Marcelo Marques Meyer</value>
+                <value column="3">46</value>
+                <value column="4">0</value>
+            </row>
+            <row>
+                <value column="0">2</value>
+                <value column="1">12345784911</value>
+                <value column="2">Miriam Leticia</value>
+                <value column="3">44</value>
+                <value column="4">1</value>
+            </row>
+            <row>
+                <value column="0">3</value>
+                <value column="1">45698712355</value>
+                <value column="2">Fulano</value>
+                <value column="3">35</value>
+                <value column="4">0</value>
+            </row>
+        </rows>
+    </table>
+    <table>
+        <database></database>
+        <name>veiculo</name>
+        <ddl>CREATE TABLE veiculo (id INTEGER PRIMARY KEY AUTOINCREMENT, renavan INT (9) UNIQUE NOT NULL, modelo STRING (50), fabricante STRING (30), ano INT (4), km REAL (999999, 3))</ddl>
+        <columns>
+            <column>
+                <name>id</name>
+                <type>INTEGER</type>
+                <constraints>
+                    <constraint>
+                        <type>PRIMARY KEY</type>
+                        <definition>PRIMARY KEY AUTOINCREMENT</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>renavan</name>
+                <type>INT</type>
+                <constraints>
+                    <constraint>
+                        <type>UNIQUE</type>
+                        <definition>UNIQUE </definition>
+                    </constraint>
+                    <constraint>
+                        <type>NOT NULL</type>
+                        <definition>NOT NULL</definition>
+                    </constraint>
+                </constraints>
+            </column>
+            <column>
+                <name>modelo</name>
+                <type>STRING</type>
+            </column>
+            <column>
+                <name>fabricante</name>
+                <type>STRING</type>
+            </column>
+            <column>
+                <name>ano</name>
+                <type>INT</type>
+            </column>
+            <column>
+                <name>km</name>
+                <type>REAL (999999, 3)</type>
+            </column>
+        </columns>
+        <rows>
+            <row>
+                <value column="0">2</value>
+                <value column="1">258963147</value>
+                <value column="2">Brasilia</value>
+                <value column="3">Volks</value>
+                <value column="4">1976</value>
+                <value column="5">172</value>
+            </row>
+            <row>
+                <value column="0">3</value>
+                <value column="1">321987654</value>
+                <value column="2">Opala</value>
+                <value column="3">GM</value>
+                <value column="4">1980</value>
+                <value column="5">52</value>
+            </row>
+            <row>
+                <value column="0">4</value>
+                <value column="1">324987651</value>
+                <value column="2">Passat</value>
+                <value column="3">Volks</value>
+                <value column="4">1984</value>
+                <value column="5">99</value>
+            </row>
+            <row>
+                <value column="0">5</value>
+                <value column="1">8976549152</value>
+                <value column="2">Corola</value>
+                <value column="3">Toyota</value>
+                <value column="4">2024</value>
+                <value column="5">0</value>
+            </row>
+            <row>
+                <value column="0">6</value>
+                <value column="1">123654789</value>
+                <value column="2">Gol Trend</value>
+                <value column="3">volks</value>
+                <value column="4">2014</value>
+                <value column="5">34.003</value>
+            </row>
+            <row>
+                <value column="0">7</value>
+                <value column="1">123654745</value>
+                <value column="2">Gol Bolinha</value>
+                <value column="3">volks</value>
+                <value column="4">2009</value>
+                <value column="5">134.003</value>
+            </row>
+        </rows>
+    </table>
+</database>
